@@ -70,6 +70,10 @@ button:hover {
   }
 }
 
+h2 {
+  padding-bottom: 20px;
+}
+
 
 /* Navbar styles */
 .navbar {
@@ -235,7 +239,7 @@ button:hover {
 .page h2,
 .page h3 {
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   vertical-align: middle;
   color: var(--accent-color);
   font-weight: 300;
@@ -302,8 +306,63 @@ strong {
 .services-page {
   background-color: var(--main-background-color);
   padding: 40px 0;
-  color: var(--main-text-color);
+  color: var(--page-background-other);
 }
+
+.services-page-contents-wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="%23ffffff" d="M253.813 14.47c-132.537 0-240.188 107.65-240.188 240.186c0 132.537 107.65 240.156 240.188 240.156C386.349 494.813 494 387.192 494 254.656S386.35 14.47 253.812 14.47zm0 18.686c122.436 0 221.5 99.064 221.5 221.5c0 17.96-2.133 35.412-6.157 52.125l-44.906-8.686l-20.53-71.594l-1.376-4.844l-4.844-1.5l-58.063-17.937l-66.906-128.626l-4.75-9.156l-8.655 5.624l-91.094 59.25l-2.936 1.907l-.97 3.374L116.19 301.97l-70.22 29.436c-8.82-23.91-13.656-49.753-13.656-76.75c0-122.436 99.064-221.5 221.5-221.5zm.812 62.125l-52.53 104.595l16.218 134.438l90.125-61.938v62.97l-23.563 6.25L305.72 470.03c-16.646 3.988-34.03 6.095-51.908 6.095c-88.813 0-165.33-52.117-200.656-127.47l74.406-31.217l4.126-1.72l1.25-4.312l48.187-168.28z"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff; 
+  padding: 40px 0px 40px 0px;
+  
+}
+
+
+.services-page-content {
+  text-align: center;
+}
+
+.service {
+  margin-top: 30px;
+  
+}
+
+.service h3 {
+  color: var(--page-background-other);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.services-h2 {
+  color: var(--page-background-other)!important;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--page-background-other);
+}
+
+/* Responsive styles for services */
+@media (max-width: 768px) {
+  .service {
+    margin-top: 20px;
+  }
+  
+  .service h3 {
+    font-size: 20px;
+  }
+
+  .service p {
+    font-size: 16px;
+  }
+}
+
 
 #contact {
   margin-bottom: 100px;
@@ -465,4 +524,46 @@ strong {
 .gallery-item:hover .image-description {
   opacity: 1;
   transition: 0.3s;
+}
+
+/* Additional styles for the contact page */
+
+.contact-page {
+  background-color: var(--page-background-other);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+label {
+  color: var(--main-text-color);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+
+/* Responsive styles for the contact form */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
 }
