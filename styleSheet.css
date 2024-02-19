@@ -546,6 +546,7 @@ form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
+  text-align: center;
 }
 
 label {
@@ -554,7 +555,7 @@ label {
 
 input,
 textarea {
-  width: 100%;
+  width: 200px;
   padding: 10px;
   border: 1px solid var(--accent-color);
   border-radius: 5px;
